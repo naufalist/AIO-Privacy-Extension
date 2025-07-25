@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>All-In-One Privacy Extension</title>
+</head>
+
+<body>
+  <div class="popup-wrapper">
+
+    <div class="header-row">
+      <h2>AIO Privacy Extension</h2>
+      <button id="toggleTheme" class="theme-toggle">🌚</button>
+    </div>
+
+    <div class="site-select">
+      <label for="siteSelector">Select Site</label>
+      <select id="siteSelector">
+        <option value="youtube">YouTube</option>
+        <option value="twitter">Twitter</option>
+        <option value="chatgpt">ChatGPT</option>
+      </select>
+    </div>
+
+    <div id="settingsContainer" class="settings-container"></div>
+
+    <div class="popup-footer">
+      <div class="footer-links">
+        <span>v1.0.0 - <a href="https://github.com/naufalist/AIO-Privacy-Extension/releases" target="_blank">Release
+            notes</a></span> - <a href="mailto:contact.naufalist@gmail.com" target="_blank">Bug reports &
+          Suggestions</a><br />
+      </div>
+      <div class="footer-credit">
+        Made with <span class="heart">♥</span> <a href="https://naufalist.com" class="credit-link" target="_blank"
+          title="Naufalist" tabindex="-1">naufalist</a>
+      </div>
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

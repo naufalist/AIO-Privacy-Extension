@@ -1,0 +1,246 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 16px;
+  background: #f9f9f9;
+  width: 320px;
+  color: #222;
+}
+
+body.dark-mode {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+.popup-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0082b5;
+}
+
+.site-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-select label {
+  margin-bottom: 6px;
+}
+
+select {
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Switch Toggle */
+.option-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.label-text {
+  font-size: 14px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.2s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #0082b5;
+}
+
+input:checked+.slider:before {
+  transform: translateX(16px);
+}
+
+/* Slider Row */
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0 12px;
+  margin-left: 24px;
+}
+
+.slider-row label {
+  flex-shrink: 0;
+  font-size: 12px;
+  width: 70px;
+}
+
+.slider-row input[type="range"] {
+  flex-grow: 1;
+}
+
+button#logStorage {
+  background-color: #0082b5;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+button#logStorage:hover {
+  background-color: #006c99;
+}
+
+/* Header Bar with Theme Toggle */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #0082b5;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.theme-toggle {
+  background-color: rgba(0, 130, 181, 0.1);
+}
+
+body.dark-mode .theme-toggle {
+  color: #eee;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-mode select {
+  background-color: #2a2a2a;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+body.dark-mode .slider {
+  background-color: #555;
+}
+
+body.dark-mode input:checked+.slider {
+  background-color: #0082b5;
+}
+
+/* Footer */
+.popup-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  z-index: 10;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #0073aa;
+}
+
+.footer-links a,
+.footer-version a {
+  color: #0073aa;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-version a:hover {
+  text-decoration: underline;
+}
+
+/* Add space at bottom so last setting isn't hidden */
+.settings-container {
+  padding-bottom: 80px;
+  /* Match popup-footer height */
+}
+
+/* Dark Mode Footer Support */
+body.dark-mode .popup-footer {
+  background: #1e1e1e;
+  border-top: 1px solid #444;
+}
+
+body.dark-mode .footer-links a,
+body.dark-mode .footer-version a {
+  color: #66ccff;
+}
+
+.popup-footer .footer-credit {
+  margin-top: 4px;
+}
+
+.popup-footer .heart {
+  color: #e25555;
+}
+
+.popup-footer a {
+  color: #0082b5;
+  text-decoration: none;
+}
+
+.popup-footer a:hover {
+  text-decoration: underline;
+}

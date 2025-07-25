@@ -1,0 +1,30 @@
+/* Tweet */
+body.blur-mode.blur-tweet article {
+  filter: blur(var(--blur-tweet, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-tweet:not(.nohover-tweet) article:hover {
+  filter: none !important;
+}
+
+/* Trending Topic */
+body.blur-mode.blur-trending [data-testid="trend"] {
+  filter: blur(var(--blur-trending, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-trending:not(.nohover-trending) [data-testid="trend"]:hover {
+  filter: none !important;
+}
+
+/* Sidebar Icons */
+body.blur-mode.blur-sidebar-icons nav[role="navigation"] svg {
+  filter: blur(var(--blur-sidebar-icons, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-sidebar-icons:not(.nohover-sidebar-icons) nav[role="navigation"] a:hover svg,
+body.blur-mode.blur-sidebar-icons:not(.nohover-sidebar-icons) nav[role="navigation"] button:hover svg {
+  filter: none !important;
+}

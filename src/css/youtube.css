@@ -1,0 +1,224 @@
+/* YouTube Logo */
+body.blur-mode.blur-logo yt-icon#logo-icon {
+  filter: blur(var(--blur-logo, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-logo:not(.nohover-logo) yt-icon#logo-icon:hover {
+  filter: none !important;
+}
+
+/* Video Titles */
+body.blur-mode.blur-titles a#video-title-link,
+body.blur-mode.blur-titles yt-formatted-string#video-title,
+body.blur-mode.blur-titles ytd-video-renderer #title-wrapper a#video-title {
+  filter: blur(var(--blur-titles, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-titles:not(.nohover-titles) a#video-title-link:hover,
+body.blur-mode.blur-titles:not(.nohover-titles) yt-formatted-string#video-title:hover,
+body.blur-mode.blur-titles:not(.nohover-titles) ytd-video-renderer #title-wrapper a#video-title:hover {
+  filter: none !important;
+}
+
+/* Video Thumbnails */
+body.blur-mode.blur-thumbnails ytd-thumbnail img.yt-core-image,
+body.blur-mode.blur-thumbnails #thumbnail img.yt-core-image,
+body.blur-mode.blur-thumbnails a#thumbnail img.yt-core-image {
+  filter: blur(var(--blur-thumbnails, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) ytd-thumbnail img.yt-core-image:hover,
+body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) #thumbnail img.yt-core-image:hover,
+body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) a#thumbnail img.yt-core-image:hover {
+  filter: none !important;
+}
+
+/* Additional Thumbnail Blur (Compact Horizontal Layout) */
+body.blur-mode.blur-thumbnails .yt-lockup-view-model-wiz__content-image img.yt-core-image {
+  filter: blur(var(--blur-thumbnails, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) .yt-lockup-view-model-wiz__content-image img.yt-core-image:hover {
+  filter: none !important;
+}
+
+/* Channel Pics */
+.blur-channel-pics yt-img-shadow img,
+.blur-channel-pics yt-spec-avatar-shape img,
+.blur-channel-pics img.yt-spec-avatar-shape__image {
+  filter: blur(var(--blur-channel-pics, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+.blur-channel-pics .yt-spec-avatar-shape:hover img,
+.blur-channel-pics yt-img-shadow:hover img,
+.blur-channel-pics yt-spec-avatar-shape:hover img.yt-spec-avatar-shape__image {
+  filter: none !important;
+}
+
+/* Force reblur if nohover is enabled */
+.nohover-channel-pics.blur-channel-pics .yt-spec-avatar-shape:hover img,
+.nohover-channel-pics.blur-channel-pics yt-img-shadow:hover img,
+.nohover-channel-pics.blur-channel-pics yt-spec-avatar-shape:hover img.yt-spec-avatar-shape__image {
+  filter: blur(var(--blur-channel-pics, 8px)) !important;
+}
+
+/* Channel Names */
+body.blur-mode.blur-channel-names ytd-channel-name yt-formatted-string#text a {
+  filter: blur(var(--blur-channel-names, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-channel-names:not(.nohover-channel-names) ytd-channel-name yt-formatted-string#text a:hover {
+  filter: none !important;
+}
+
+/* Watch Title */
+body.blur-mode.blur-watch-title ytd-watch-metadata yt-formatted-string[title] {
+  filter: blur(var(--blur-watch-title, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-watch-title:not(.nohover-watch-title) ytd-watch-metadata yt-formatted-string[title]:hover {
+  filter: none !important;
+}
+
+/* Video Description */
+body.blur-mode.blur-video-description #info-container,
+body.blur-mode.blur-video-description #description-inline-expander #snippet,
+body.blur-mode.blur-video-description #description-inline-expander #expanded,
+body.blur-mode.blur-video-description ytd-video-renderer .metadata-snippet-container .metadata-snippet-text,
+body.blur-mode.blur-video-description ytd-video-renderer .metadata-snippet-container yt-formatted-string.metadata-snippet-text,
+body.blur-mode.blur-video-description ytd-video-renderer .metadata-snippet-container yt-formatted-string.metadata-snippet-text-navigation {
+  filter: blur(var(--blur-video-description, 10px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-video-description:not(.nohover-video-description) #info-container:hover,
+body.blur-mode.blur-video-description:not(.nohover-video-description) #description-inline-expander:hover #snippet,
+body.blur-mode.blur-video-description:not(.nohover-video-description) #description-inline-expander:hover #expanded,
+body.blur-mode.blur-video-description:not(.nohover-video-description) ytd-video-renderer .metadata-snippet-container .metadata-snippet-text:hover,
+body.blur-mode.blur-video-description:not(.nohover-video-descriptions) ytd-video-renderer .metadata-snippet-container yt-formatted-string.metadata-snippet-text:hover,
+body.blur-mode.blur-video-description:not(.nohover-video-descriptions) ytd-video-renderer .metadata-snippet-container yt-formatted-string.metadata-snippet-text-navigation:hover {
+  filter: none !important;
+}
+
+/* Mix Thumbnails */
+.blur-thumbnails yt-collections-stack img.yt-core-image {
+  filter: blur(var(--blur-thumbnails, 8px)) !important;
+}
+
+body.blur-thumbnails yt-collections-stack:hover img.yt-core-image {
+  filter: none !important;
+}
+
+body.nohover-thumbnails.blur-thumbnails yt-collections-stack:hover img.yt-core-image {
+  filter: blur(var(--blur-thumbnails, 8px)) !important;
+}
+
+/* Playlist Titles */
+body.blur-mode.blur-playlist-titles span#video-title.style-scope.ytd-playlist-panel-video-renderer {
+  filter: blur(var(--blur-playlist-titles, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-playlist-titles:not(.nohover-playlist-titles) span#video-title:hover {
+  filter: none !important;
+}
+
+/* Playlist Byline */
+body.blur-mode.blur-playlist-byline span#byline.style-scope.ytd-playlist-panel-video-renderer {
+  filter: blur(var(--blur-playlist-byline, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-playlist-byline:not(.nohover-playlist-byline) span#byline:hover {
+  filter: none !important;
+}
+
+/* Sidebar Subscriptions */
+body.blur-mode.blur-sidebar-subscriptions ytd-guide-entry-renderer yt-formatted-string.title {
+  filter: blur(var(--blur-sidebar-subscriptions, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-sidebar-subscriptions:not(.nohover-sidebar-subscriptions) ytd-guide-entry-renderer yt-formatted-string.title:hover {
+  filter: none !important;
+}
+
+/* Shorts Titles */
+body.blur-mode.blur-shorts-titles h3.shortsLockupViewModelHostMetadataTitle .yt-core-attributed-string {
+  filter: blur(var(--blur-shorts-titles, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-shorts-titles:not(.nohover-shorts-titles) h3.shortsLockupViewModelHostMetadataTitle .yt-core-attributed-string:hover {
+  filter: none !important;
+}
+
+/* Mix Titles */
+body.blur-mode.blur-mix-titles .yt-lockup-metadata-view-model-wiz__title,
+body.blur-mode.blur-mix-titles .yt-lockup-metadata-view-model-wiz__title .yt-core-attributed-string {
+  filter: blur(var(--blur-mix-titles, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-mix-titles:not(.nohover-mix-titles) .yt-lockup-metadata-view-model-wiz__title:hover,
+body.blur-mode.blur-mix-titles:not(.nohover-mix-titles) .yt-lockup-metadata-view-model-wiz__title .yt-core-attributed-string:hover {
+  filter: none !important;
+}
+
+/* Mix Titles in Playlist Panel */
+body.blur-mode.blur-mix-titles ytd-playlist-panel-renderer #header-description yt-formatted-string.title,
+body.blur-mode.blur-mix-titles ytd-playlist-panel-renderer #header-description .byline-title {
+  filter: blur(var(--blur-mix-titles, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-mix-titles:not(.nohover-mix-titles) ytd-playlist-panel-renderer #header-description yt-formatted-string.title:hover,
+body.blur-mode.blur-mix-titles:not(.nohover-mix-titles) ytd-playlist-panel-renderer #header-description .byline-title:hover {
+  filter: none !important;
+}
+
+/* Mix Channel Names */
+body.blur-mode.blur-mix-channel-names .yt-lockup-metadata-view-model-wiz__metadata .yt-core-attributed-string {
+  filter: blur(var(--blur-mix-channel-names, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-mix-channel-names:not(.nohover-mix-channel-names) .yt-lockup-metadata-view-model-wiz__metadata .yt-core-attributed-string:hover {
+  filter: none !important;
+}
+
+/* Search Box Input & Suggestion Text Opacity */
+body.blur-mode.reduced-searchbox-text-opacity input.ytSearchboxComponentInput,
+body.blur-mode.reduced-searchbox-text-opacity .ytSuggestionComponentBold {
+  opacity: var(--opacity-searchbox-text-opacity, 0.3) !important;
+  transition: opacity 0.2s ease;
+}
+
+body.blur-mode.reduced-searchbox-text-opacity:not(.nohover-searchbox-text-opacity):hover input.ytSearchboxComponentInput,
+body.blur-mode.reduced-searchbox-text-opacity:not(.nohover-searchbox-text-opacity):hover .ytSuggestionComponentBold {
+  opacity: 1 !important;
+}
+
+/* YouTube Shorts Thumbnails */
+.blur-shorts-thumbnails ytm-shorts-lockup-view-model-v2 img.shortsLockupViewModelHostThumbnail,
+.blur-shorts-thumbnails ytm-shorts-lockup-view-model img.shortsLockupViewModelHostThumbnail {
+  filter: blur(var(--blur-shorts-thumbnails, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-shorts-thumbnails ytm-shorts-lockup-view-model-v2 img.shortsLockupViewModelHostThumbnail:hover,
+body.blur-shorts-thumbnails ytm-shorts-lockup-view-model img.shortsLockupViewModelHostThumbnail:hover {
+  filter: none !important;
+}
+
+body.nohover-shorts-thumbnails.blur-shorts-thumbnails ytm-shorts-lockup-view-model-v2 img.shortsLockupViewModelHostThumbnail:hover,
+body.nohover-shorts-thumbnails.blur-shorts-thumbnails ytm-shorts-lockup-view-model img.shortsLockupViewModelHostThumbnail:hover {
+  filter: blur(var(--blur-shorts-thumbnails, 8px)) !important;
+}

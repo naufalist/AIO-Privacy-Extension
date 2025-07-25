@@ -1,0 +1,19 @@
+/* Sidebar Titles */
+body.blur-mode.blur-sidebar-titles nav a.group.__menu-item span[dir="auto"] {
+  filter: blur(var(--blur-sidebar-titles, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-sidebar-titles:not(.nohover-sidebar-titles) nav a.group.__menu-item:hover span[dir="auto"] {
+  filter: none !important;
+}
+
+/* Chat Section Block */
+body.blur-mode.blur-chat-section-block article[data-testid^="conversation-turn-"] .text-message {
+  filter: blur(var(--blur-chat-section-block, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-chat-section-block:not(.nohover-chat-section-block) article[data-testid^="conversation-turn-"]:hover .text-message {
+  filter: none !important;
+}
