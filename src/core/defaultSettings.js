@@ -10,6 +10,7 @@ export const defaultSettings = {
     "playlist-titles": true,
     "playlist-byline": true,
     "searchbox-text-opacity": true,
+    "searchbox-text-opacity_nohover": true,
     "sidebar-subscriptions": true,
     "mix-titles": true,
     "mix-channel-names": true,
