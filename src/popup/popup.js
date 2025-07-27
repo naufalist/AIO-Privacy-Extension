@@ -27,6 +27,26 @@ const siteOptions = {
   ],
 };
 
+function safeSendMessage(message, site, optionId = null) {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    const tab = tabs?.[0];
+    if (!tab?.id || !tab?.url || !tab.url.includes(site)) return;
+
+    chrome.tabs.sendMessage(tab.id, { ping: true }, (response) => {
+      if (chrome.runtime.lastError) {
+        console.log(`[safeSendMessage] No content script:`, chrome.runtime.lastError.message);
+        return;
+      }
+
+      try {
+        chrome.tabs.sendMessage(tab.id, message);
+      } catch (e) {
+        console.log(`[safeSendMessage] Failed to send message for option: ${optionId}`, e);
+      }
+    });
+  });
+}
+
 function detectActiveSite(callback) {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (!tabs || !tabs[0] || !tabs[0].url) return callback(null);
@@ -156,15 +176,13 @@ function renderSettings(site) {
         chrome.storage.local.set({ [noHoverKey]: isChecked });
       }
 
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, {
-          type: "update-setting",
-          site,
-          optionId: option.id,
-          value: isChecked,
-          disableHoverUnblur: option.disableHoverUnblur || false
-        });
-      });
+      safeSendMessage({
+        type: "update-setting",
+        site,
+        optionId: option.id,
+        value: isChecked,
+        disableHoverUnblur: option?.disableHoverUnblur || false
+      }, site, option.id);
 
       updateMasterState();
     });
@@ -185,20 +203,30 @@ function renderSettings(site) {
     range.id = `${option.id}_strength`;
 
     chrome.storage.local.get(`${optionKey}_strength`, (result) => {
-      range.value = result[`${optionKey}_strength`] ?? (isOpacity ? 0.3 : 10);
+      const savedValue = result[`${optionKey}_strength`] ?? (isOpacity ? 0.3 : 10);
+      range.value = savedValue;
+
+      chrome.storage.local.get([optionKey], (res) => {
+        if (res[optionKey]) {
+          safeSendMessage({
+            type: isOpacity ? "update-opacity-strength" : "update-blur-strength",
+            site,
+            optionId: option.id,
+            value: savedValue
+          }, site, option.id);
+        }
+      });
     });
 
     range.addEventListener("input", () => {
       const value = range.value;
       chrome.storage.local.set({ [`${optionKey}_strength`]: value }, () => {
-        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-          chrome.tabs.sendMessage(tabs[0].id, {
-            type: isOpacity ? "update-opacity-strength" : "update-blur-strength",
-            site,
-            optionId: option.id,
-            value
-          });
-        });
+        safeSendMessage({
+          type: isOpacity ? "update-opacity-strength" : "update-blur-strength",
+          site,
+          optionId: option.id,
+          value
+        }, site, option.id);
       });
     });
 
@@ -222,15 +250,13 @@ function renderSettings(site) {
           await setStorageAsync({ [`${optionKey}_nohover`]: targetChecked });
         }
 
-        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-          chrome.tabs.sendMessage(tabs[0].id, {
-            type: "update-setting",
-            site,
-            optionId: id,
-            value: targetChecked,
-            disableHoverUnblur: option?.disableHoverUnblur || false
-          });
-        });
+        safeSendMessage({
+          type: "update-setting",
+          site,
+          optionId: id,
+          value: targetChecked,
+          disableHoverUnblur: option?.disableHoverUnblur || false
+        }, site, id);
 
         await new Promise(r => setTimeout(r, 15));
       }

@@ -9,6 +9,8 @@ export async function initSite(site, cssPath) {
   await waitForBody();
   const settings = await getSettings(site);
 
+  if (!settings) return;
+
   injectInitialBlur(site, settings);
   injectCss(cssPath);
   await applyAllClasses(site, settings);
@@ -19,7 +21,11 @@ export async function initSite(site, cssPath) {
   });
   observer.observe(document.body, { childList: true, subtree: true });
 
-  chrome.runtime.onMessage.addListener(async (message) => {
+  chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+    if (message.ping) {
+      sendResponse({ pong: true });
+    }
+
     if (message.site !== site) return;
 
     const className = message.optionId.includes("opacity")
