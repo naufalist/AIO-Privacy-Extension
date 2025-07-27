@@ -12,7 +12,8 @@
     "*://twitter.com/*",
     "*://chatgpt.com/*",
     "*://chat.openai.com/*",
-    "*://*.facebook.com/*"
+    "*://*.facebook.com/*",
+    "*://*.quora.com/*"
   ],
   "action": {
     "default_popup": "popup/popup.html",
@@ -55,6 +56,14 @@
       ],
       "js": [
         "content/facebook.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.quora.com/*"
+      ],
+      "js": [
+        "content/quora.js"
       ]
     }
   ],

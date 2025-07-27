@@ -35,6 +35,13 @@ const siteOptions = {
     { id: "chat-avatar", label: "Chat Avatar (FB Messenger)" },
     { id: "chat-input-opacity", label: "Chat Input Opacity (FB Messenger)", isOpacity: true, disableHoverUnblur: true }
   ],
+  quora: [
+    { id: "article-avatar", label: "Article Avatar" },
+    { id: "article-display-name", label: "Article Display Name" },
+    { id: "article-user-byline", label: "Article User Byline" },
+    { id: "article-content-title", label: "Article Content Title" },
+    { id: "article-content", label: "Article Content" }
+  ]
 };
 
 function safeSendMessage(message, site, optionId = null) {
@@ -68,6 +75,7 @@ function detectActiveSite(callback) {
     if (hostname.includes("x.com") || hostname.includes("twitter.com")) return callback("twitter");
     if (hostname.includes("chat.openai.com") || hostname.includes("chatgpt.com")) return callback("chatgpt");
     if (hostname.includes("facebook.com")) return callback("facebook");
+    if (hostname.includes("quora.com")) return callback("quora");
 
     return callback(null);
   });

@@ -1,0 +1,140 @@
+/* Quora - Article Avatar */
+body.blur-mode.blur-article-avatar img.q-image.qu-size--36 {
+  filter: blur(var(--blur-article-avatar, 8px)) !important;
+}
+
+body.blur-mode.blur-article-avatar:not(.nohover-article-avatar) img.q-image.qu-size--36:hover {
+  filter: none !important;
+}
+
+/* Quora - Tribe/Community Display Name */
+body.blur-mode.blur-article-display-name .q-text.qu-dynamicFontSize--small.qu-bold.qu-color--gray_dark a[href*="/profile/"],
+body.blur-mode.blur-article-display-name .q-text.puppeteer_test_tribe_name {
+  filter: blur(var(--blur-article-display-name, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-article-display-name:not(.nohover-article-display-name) .q-text.qu-dynamicFontSize--small.qu-bold.qu-color--gray_dark a[href*="/profile/"]:hover,
+body.blur-mode.blur-article-display-name:not(.nohover-article-display-name) .q-text.puppeteer_test_tribe_name:hover {
+  filter: none !important;
+}
+
+/* Quora - Article Display Name (Generic: fallback for non-link names like "Anonim") */
+body.blur-mode.blur-article-display-name .q-inlineFlex.qu-alignItems--center.qu-wordBreak--break-word span span {
+  filter: blur(var(--blur-article-display-name, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-article-display-name:not(.nohover-article-display-name) .q-inlineFlex.qu-alignItems--center.qu-wordBreak--break-word span span:hover {
+  filter: none !important;
+}
+
+/* Quora - Article User Byline - Avatar (small size, 18px) */
+body.blur-mode.blur-article-user-byline .q-inlineFlex.qu-overflow--hidden img.q-image.qu-size--18 {
+  filter: blur(var(--blur-article-user-byline, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-article-user-byline:not(.nohover-article-user-byline) .q-inlineFlex.qu-overflow--hidden img.q-image.qu-size--18:hover {
+  filter: none !important;
+}
+
+/* Quora - Article User Byline - Display Name (only within user byline) */
+body.blur-mode.blur-article-user-byline .q-text.qu-color--gray .q-inlineFlex.qu-alignItems--center span span {
+  filter: blur(var(--blur-article-user-byline, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-article-user-byline:not(.nohover-article-user-byline) .q-text.qu-color--gray .q-inlineFlex.qu-alignItems--center span span:hover {
+  filter: none !important;
+}
+
+/* Quora - Article User Byline - Timestamp (e.g., "10mo") */
+body.blur-mode.blur-article-user-byline .q-text.qu-color--gray.qu-passColorToLinks {
+  filter: blur(var(--blur-article-user-byline, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-article-user-byline:not(.nohover-article-user-byline) .q-text.qu-color--gray.qu-passColorToLinks:hover {
+  filter: none !important;
+}
+
+/* Quora - Article Content Title (Quote/Preview) */
+body.blur-mode.blur-article-content-title div.puppeteer_test_question_title {
+  filter: blur(var(--blur-article-content-title, 8px)) !important;
+}
+
+body.blur-mode.blur-article-content-title:not(.nohover-article-content-title) div.puppeteer_test_question_title:hover {
+  filter: none !important;
+}
+
+/* Quora - Article Content Title (Non-quote post) */
+body.blur-mode.blur-article-content-title .q-text.qu-dynamicFontSize--regular_title.qu-fontWeight--bold a.puppeteer_test_link {
+  filter: blur(var(--blur-article-content-title, 8px)) !important;
+}
+
+body.blur-mode.blur-article-content-title:not(.nohover-article-content-title) .q-text.qu-dynamicFontSize--regular_title.qu-fontWeight--bold a.puppeteer_test_link:hover {
+  filter: none !important;
+}
+
+/* Quora - Article Content - Blur paragraph, list, picture (not preview) */
+body.blur-mode.blur-article-content .q-box.qu-userSelect--text :is(p.q-text.qu-display--block.qu-wordBreak--break-word.qu-textAlign--start,
+  ol.q-box,
+  li.q-relative,
+  .q-box.unzoomed img):not(.qu-truncateLines--3):not(.puppeteer_test_question_title) {
+  filter: blur(var(--blur-article-content, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-article-content:not(.nohover-article-content) .q-box.qu-userSelect--text :is(p.q-text.qu-display--block.qu-wordBreak--break-word.qu-textAlign--start,
+  ol.q-box,
+  li.q-relative,
+  .q-box.unzoomed img):not(.qu-truncateLines--3):not(.puppeteer_test_question_title):hover {
+  filter: none !important;
+}
+
+/* Quora - Article Content - Blur preview text (content summary) */
+body.blur-mode.blur-article-content div.q-text.qu-truncateLines--3 {
+  filter: blur(var(--blur-article-content, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-article-content:not(.nohover-article-content) div.q-text.qu-truncateLines--3:hover {
+  filter: none !important;
+}
+
+/* Quora - Article Content - Blur background-image preview (image in preview card) */
+body.blur-mode.blur-article-content .q-inlineBlock.qu-overflow--hidden>.q-box[style*="background-image"] {
+  filter: blur(var(--blur-article-content, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+/* Quora - Article Content - Hover unblur for background-image preview */
+body.blur-mode.blur-article-content:not(.nohover-article-content) .q-inlineBlock.qu-overflow--hidden>.q-box[style*="background-image"]:hover {
+  filter: none !important;
+}
+
+/* Quora - Article Content - Fix pointer-events to able hover on image preview */
+body.blur-mode.blur-article-content .q-flex.qu-justifyContent--space-between {
+  pointer-events: auto !important;
+}
+
+/* Quora - Article Content - Blur direct <img> blocks (not in preview) */
+body.blur-mode.blur-article-content div.q-box>div.q-box>img.q-image {
+  filter: blur(var(--blur-article-content, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+/* Hover to unblur */
+body.blur-mode.blur-article-content:not(.nohover-article-content) div.q-box>div.q-box>img.q-image:hover {
+  filter: none !important;
+}
+
+/* body.blur-mode.blur-article-content img.q-image:not(.qu-size--36) {
+  filter: blur(var(--blur-article-content, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-article-content:not(.nohover-article-content) img.q-image:not(.qu-size--36):hover {
+  filter: none !important;
+} */
