@@ -36,11 +36,13 @@ const siteOptions = {
     { id: "chat-input-opacity", label: "Chat Input Opacity (FB Messenger)", isOpacity: true, disableHoverUnblur: true }
   ],
   quora: [
+    { id: "article-full-block", label: "Article Full Block" },
     { id: "article-avatar", label: "Article Avatar" },
     { id: "article-display-name", label: "Article Display Name" },
     { id: "article-user-byline", label: "Article User Byline" },
     { id: "article-content-title", label: "Article Content Title" },
-    { id: "article-content", label: "Article Content" }
+    { id: "article-content", label: "Article Content" },
+    { id: "question-card", label: "Question Card" }
   ]
 };
 

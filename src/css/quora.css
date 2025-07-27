@@ -1,3 +1,37 @@
+/* Quora - Article Full Block (preview, opened, quoted) */
+body.blur-mode.blur-article-full-block .q-box.qu-borderAll,
+body.blur-mode.blur-article-full-block .q-box.qu-borderTop,
+body.blur-mode.blur-article-full-block .q-box.qu-borderBottom,
+body.blur-mode.blur-article-full-block .q-box.qu-borderLeft,
+body.blur-mode.blur-article-full-block .q-box.qu-borderRight,
+body.blur-mode.blur-article-full-block .q-box.qu-borderRadius--medium,
+body.blur-mode.blur-article-full-block .q-box.qu-boxShadow--medium {
+  filter: blur(var(--blur-article-full-block, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+/* Quora - Article Full Block (preview, opened, quoted) - Hover to unblur */
+body.blur-mode.blur-article-full-block:not(.nohover-article-full-block) .q-box.qu-borderAll:hover,
+body.blur-mode.blur-article-full-block:not(.nohover-article-full-block) .q-box.qu-borderTop:hover,
+body.blur-mode.blur-article-full-block:not(.nohover-article-full-block) .q-box.qu-borderBottom:hover,
+body.blur-mode.blur-article-full-block:not(.nohover-article-full-block) .q-box.qu-borderLeft:hover,
+body.blur-mode.blur-article-full-block:not(.nohover-article-full-block) .q-box.qu-borderRight:hover,
+body.blur-mode.blur-article-full-block:not(.nohover-article-full-block) .q-box.qu-borderRadius--medium:hover,
+body.blur-mode.blur-article-full-block:not(.nohover-article-full-block) .q-box.qu-boxShadow--medium:hover {
+  filter: none !important;
+}
+
+/* Quora - Article Full Block (preview, opened, quoted) - Force to reblur when nohover still active */
+body.nohover-article-full-block.blur-mode.blur-article-full-block .q-box.qu-borderAll:hover,
+body.nohover-article-full-block.blur-mode.blur-article-full-block .q-box.qu-borderTop:hover,
+body.nohover-article-full-block.blur-mode.blur-article-full-block .q-box.qu-borderBottom:hover,
+body.nohover-article-full-block.blur-mode.blur-article-full-block .q-box.qu-borderLeft:hover,
+body.nohover-article-full-block.blur-mode.blur-article-full-block .q-box.qu-borderRight:hover,
+body.nohover-article-full-block.blur-mode.blur-article-full-block .q-box.qu-borderRadius--medium:hover,
+body.nohover-article-full-block.blur-mode.blur-article-full-block .q-box.qu-boxShadow--medium:hover {
+  filter: blur(var(--blur-article-full-block, 8px)) !important;
+}
+
 /* Quora - Article Avatar */
 body.blur-mode.blur-article-avatar img.q-image.qu-size--36 {
   filter: blur(var(--blur-article-avatar, 8px)) !important;
@@ -138,3 +172,13 @@ body.blur-mode.blur-article-content:not(.nohover-article-content) div.q-box>div.
 body.blur-mode.blur-article-content:not(.nohover-article-content) img.q-image:not(.qu-size--36):hover {
   filter: none !important;
 } */
+
+/* Quora - Question Card */
+body.blur-mode.blur-question-card .q-box.puppeteer_test_question_component_base {
+  filter: blur(var(--blur-question-card, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-question-card:not(.nohover-question-card) .q-box.puppeteer_test_question_component_base:hover {
+  filter: none !important;
+}

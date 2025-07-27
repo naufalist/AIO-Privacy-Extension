@@ -70,17 +70,21 @@ export const defaultSettings = {
     "chat-input-opacity_nohover": true
   },
   quora: {
-    "article-avatar": true,
-    "article-display-name": true,
-    "article-user-byline": true,
-    "article-content-title": true,
-    "article-content": true,
+    "article-full-block": true,
+    "article-avatar": false,
+    "article-display-name": false,
+    "article-user-byline": false,
+    "article-content-title": false,
+    "article-content": false,
+    "question-card": true,
 
+    "article-full-block_strength": 4,
     "article-avatar_strength": 4,
     "article-display-name_strength": 4,
     "article-user-byline_strength": 4,
-    "article-content-title_strength": 16,
-    "article-content_strength": 16
+    "article-content-title_strength": 4,
+    "article-content_strength": 16,
+    "question-card_strength": 4
   }
 };
 
