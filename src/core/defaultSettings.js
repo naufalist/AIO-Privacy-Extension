@@ -47,6 +47,26 @@ export const defaultSettings = {
 
     "sidebar-titles_strength": 8,
     "chat-section-block_strength": 8
+  },
+  facebook: {
+    "avatar": true,
+    "display-name-chat": true,
+    "sidebar-display-names": true,
+    "sidebar-chat-preview": true,
+    "chat-bubble": true,
+    "chat-media": true,
+    "chat-avatar": true,
+    "chat-input-opacity": true,
+
+    "avatar_strength": 8,
+    "display-name-chat_strength": 8,
+    "sidebar-display-names_strength": 8,
+    "sidebar-chat-preview_strength": 8,
+    "chat-bubble_strength": 8,
+    "chat-media_strength": 8,
+    "chat-avatar_strength": 8,
+    "chat-input-opacity_strength": 0.3,
+    "chat-input-opacity_nohover": true
   }
 };
 

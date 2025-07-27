@@ -25,6 +25,16 @@ const siteOptions = {
     { id: "sidebar-titles", label: "Sidebar Titles" },
     { id: "chat-section-block", label: "Chat Section" }
   ],
+  facebook: [
+    { id: "avatar", label: "Avatar (FB Messenger)" },
+    { id: "display-name-chat", label: "Display Name Chat (FB Messenger)" },
+    { id: "sidebar-display-names", label: "Sidebar Display Name (FB Messenger)" },
+    { id: "sidebar-chat-preview", label: "Sidebar Chat Preview (FB Messenger)" },
+    { id: "chat-bubble", label: "Chat Bubble (FB Messenger)" },
+    { id: "chat-media", label: "Chat Media (FB Messenger)" },
+    { id: "chat-avatar", label: "Chat Avatar (FB Messenger)" },
+    { id: "chat-input-opacity", label: "Chat Input Opacity (FB Messenger)", isOpacity: true, disableHoverUnblur: true }
+  ],
 };
 
 function safeSendMessage(message, site, optionId = null) {
@@ -57,6 +67,7 @@ function detectActiveSite(callback) {
     if (hostname.includes("youtube.com")) return callback("youtube");
     if (hostname.includes("x.com") || hostname.includes("twitter.com")) return callback("twitter");
     if (hostname.includes("chat.openai.com") || hostname.includes("chatgpt.com")) return callback("chatgpt");
+    if (hostname.includes("facebook.com")) return callback("facebook");
 
     return callback(null);
   });

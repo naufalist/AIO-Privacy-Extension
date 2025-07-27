@@ -1,0 +1,88 @@
+/* Facebook Messenger - Avatar */
+body.blur-mode.blur-avatar img.x15mokao.x1ga7v0g.x16uus16.xbiv7yw {
+  filter: blur(var(--blur-avatar, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-avatar:not(.nohover-avatar) img.x15mokao.x1ga7v0g.x16uus16.xbiv7yw:hover {
+  filter: none !important;
+}
+
+/* Facebook Messenger - Display Name Chat */
+/*
+  Only applies to the chat header, not the right sidebar:
+    body.blur-mode.blur-name-fb h2 span.x1lliihq.x6ikm8r.x10wlt62.x1n2onr6.xlyipyv
+    body.blur-mode.blur-name-fb:not(.nohover-name-fb) h2 span.x1lliihq.x6ikm8r.x10wlt62.x1n2onr6.xlyipyv:hover
+*/
+body.blur-mode.blur-display-name-chat h2.xeuugli span.x1lliihq {
+  filter: blur(var(--blur-display-name-chat, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-display-name-chat:not(.nohover-display-name-chat) h2.xeuugli span.x1lliihq:hover {
+  filter: none !important;
+}
+
+/* Facebook Messenger - Sidebar Display Names */
+body.blur-mode.blur-sidebar-display-names a.x1a2a7pz span.x1lliihq.x6ikm8r.x10wlt62.x1n2onr6.xlyipyv.xuxw1ft:not(.x1j85h84) {
+  filter: blur(var(--blur-sidebar-display-names, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-sidebar-display-names:not(.nohover-sidebar-display-names) a.x1a2a7pz span.x1lliihq.x6ikm8r.x10wlt62.x1n2onr6.xlyipyv.xuxw1ft:not(.x1j85h84):hover {
+  filter: none !important;
+}
+
+/* Facebook Messenger - Sidebar Chat Preview */
+body.blur-mode.blur-sidebar-chat-preview div[role="row"] span.x1lliihq.x6ikm8r.x10wlt62.x1n2onr6.x1j85h84 {
+  filter: blur(var(--blur-sidebar-chat-preview, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-sidebar-chat-preview:not(.nohover-sidebar-chat-preview) div[role="row"] span.x1lliihq.x6ikm8r.x10wlt62.x1n2onr6.x1j85h84:hover {
+  filter: none !important;
+}
+
+/* Facebook Messenger - Chat Bubble with reply label and replied message */
+body.blur-mode.blur-chat-bubble div[dir="auto"].x1yc453h,
+body.blur-mode.blur-chat-bubble div.xeuugli.x14vy60q span.x1aimgj9,
+body.blur-mode.blur-chat-bubble div.x1mzt3pk.x1l90r2v.x1iorvi4 {
+  filter: blur(var(--blur-chat-bubble, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-chat-bubble:not(.nohover-chat-bubble) div[dir="auto"].x1yc453h:hover,
+body.blur-mode.blur-chat-bubble:not(.nohover-chat-bubble) div.xeuugli.x14vy60q span.x1aimgj9:hover,
+body.blur-mode.blur-chat-bubble:not(.nohover-chat-bubble) div.x1mzt3pk.x1l90r2v.x1iorvi4:hover {
+  filter: none !important;
+}
+
+/* Facebook Messenger - Chat Media */
+body.blur-mode.blur-chat-media img.xz74otr.xmz0i5r.x193iq5w {
+  filter: blur(var(--blur-chat-media, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-chat-media:not(.nohover-chat-media) img.xz74otr.xmz0i5r.x193iq5w:hover {
+  filter: none !important;
+}
+
+/* Facebook Messenger - Chat Avatar (in chat, not sidebar) */
+body.blur-mode.blur-chat-avatar img.x1rg5ohu.x5yr21d.xl1xv1r.xh8yej3 {
+  filter: blur(var(--blur-chat-avatar, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-chat-avatar:not(.nohover-chat-avatar) img.x1rg5ohu.x5yr21d.xl1xv1r.xh8yej3:hover {
+  filter: none !important;
+}
+
+/* Facebook Messenger - Reduced Opacity Chat Input */
+body.blur-mode.reduced-chat-input-opacity div[contenteditable="true"][role="textbox"] {
+  opacity: var(--opacity-chat-input-opacity, 0.1) !important;
+  transition: opacity 0.2s ease;
+}
+
+body.blur-mode.reduced-chat-input-opacity:not(.nohover-chat-input-opacity) div[contenteditable="true"][role="textbox"]:hover {
+  opacity: 1 !important;
+}
