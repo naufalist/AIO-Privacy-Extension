@@ -97,6 +97,7 @@ This extension was built out of a personal need for screen privacy in open offic
         <ul>
           <li>Blur sidebar titles (chat names)</li>
           <li>Blur chat section blocks (text messages)</li>
+          <li>Reduce opacity for prompt input box</li>
           <li>Supports hover-to-unblur for each feature</li>
         </ul>
       </td>
