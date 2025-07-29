@@ -48,6 +48,25 @@ const siteOptions = {
   canva: [
     { id: "canva-page-header", label: "Canva Page Header" },
     { id: "canva-page-content", label: "Canva Page Content" },
+  ],
+  linkedin: [
+    { id: "topbar-logo", label: "Topbar Logo" },
+    { id: "post", label: "Post" },
+    { id: "profile-card-picture", label: "Profile Card - Picture" },
+    { id: "profile-card-name", label: "Profile Card - Name" },
+    { id: "profile-card-headline", label: "Profile Card - Headline" },
+    { id: "profile-card-location", label: "Profile Card - Location" },
+    { id: "message-user-picture", label: "Message - User Picture" },
+    { id: "message-user-name", label: "Message - User Name" },
+    { id: "message-preview", label: "Message - Preview" },
+    { id: "message-preview-timestamp", label: "Message - Preview Timestamp" },
+    { id: "add-to-your-feed", label: "Add to your feed" },
+    { id: "opened-selected-message-avatar", label: "Selected Chat - Avatar" },
+    { id: "opened-selected-message-name", label: "Selected Chat - Name" },
+    { id: "opened-selected-message-profile-card", label: "Selected Chat - Profile Card" },
+    { id: "opened-selected-message-in-chat-name", label: "Selected Chat - In Chat Name" },
+    { id: "opened-selected-message-in-chat-text", label: "Selected Chat - In Chat Text" },
+    { id: "opened-selected-message-in-chat-box-opacity", label: "Selected Chat - In Chat Box Opacity", isOpacity: true, disableHoverUnblur: true }
   ]
 };
 
@@ -84,6 +103,7 @@ function detectActiveSite(callback) {
     if (hostname.includes("facebook.com")) return callback("facebook");
     if (hostname.includes("quora.com")) return callback("quora");
     if (hostname.includes("canva.com")) return callback("canva");
+    if (hostname.includes("linkedin.com")) return callback("linkedin");
 
     return callback(null);
   });

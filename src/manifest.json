@@ -14,7 +14,8 @@
     "*://chat.openai.com/*",
     "*://*.facebook.com/*",
     "*://*.quora.com/*",
-    "*://www.canva.com/*"
+    "*://www.canva.com/*",
+    "*://www.linkedin.com/*"
   ],
   "action": {
     "default_popup": "popup/popup.html",
@@ -73,6 +74,14 @@
       ],
       "js": [
         "content/canva.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://www.linkedin.com/*"
+      ],
+      "js": [
+        "content/linkedin.js"
       ]
     }
   ],

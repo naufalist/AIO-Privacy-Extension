@@ -95,6 +95,44 @@ export const defaultSettings = {
 
     "canva-page-header_strength": 4,
     "canva-page-content_strength": 16
+  },
+  linkedin: {
+    "topbar-logo": true,
+    "post": true,
+    "profile-card-picture": true,
+    "profile-card-name": true,
+    "profile-card-headline": true,
+    "profile-card-location": true,
+    "message-user-picture": true,
+    "message-user-name": true,
+    "message-preview": true,
+    "message-preview-timestamp": true,
+    "add-to-your-feed": true,
+    "opened-selected-message-avatar": true,
+    "opened-selected-message-name": true,
+    "opened-selected-message-profile-card": true,
+    "opened-selected-message-in-chat-name": true,
+    "opened-selected-message-in-chat-text": true,
+    "opened-selected-message-in-chat-box-opacity": true,
+    "opened-selected-message-in-chat-box-opacity_nohover": true,
+
+    "topbar-logo_strength": 10,
+    "post_strength": 8,
+    "profile-card-picture_strength": 8,
+    "profile-card-name_strength": 8,
+    "profile-card-headline_strength": 8,
+    "profile-card-location_strength": 8,
+    "message-user-picture_strength": 4,
+    "message-user-name_strength": 4,
+    "message-preview_strength": 4,
+    "message-preview-timestamp_strength": 4,
+    "add-to-your-feed_strength": 4,
+    "opened-selected-message-avatar_strength": 4,
+    "opened-selected-message-name_strength": 4,
+    "opened-selected-message-profile-card_strength": 4,
+    "opened-selected-message-in-chat-name_strength": 4,
+    "opened-selected-message-in-chat-text_strength": 4,
+    "opened-selected-message-in-chat-box-opacity_strength": 0.3
   }
 };
 

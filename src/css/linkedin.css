@@ -1,0 +1,185 @@
+/* Topbar Logo */
+body.blur-mode.blur-topbar-logo .ivm-image-view-model.global-nav__branding-logo {
+  filter: blur(var(--blur-topbar-logo, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-logo:not(.nohover-topbar-logo) .ivm-image-view-model.global-nav__branding-logo:hover {
+  filter: none !important;
+}
+
+/* Post */
+body.blur-mode.blur-post .fie-impression-container,
+body.blur-mode.blur-post .update-v2-social-activity {
+  filter: blur(var(--blur-post, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-post:not(.nohover-post) .fie-impression-container:hover,
+body.blur-mode.blur-post:not(.nohover-post) .update-v2-social-activity:hover {
+  filter: none !important;
+}
+
+/* Avatar */
+body.blur-mode.blur-avatar img.update-components-actor__avatar-image {
+  filter: blur(var(--blur-avatar, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-avatar:not(.nohover-avatar) img.update-components-actor__avatar-image:hover {
+  filter: none !important;
+}
+
+/* Profile Card Picture */
+body.blur-mode.blur-profile-card-picture .profile-card-profile-picture {
+  filter: blur(var(--blur-profile-card-picture, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-profile-card-picture:not(.nohover-profile-card-picture) .profile-card-profile-picture:hover {
+  filter: none !important;
+}
+
+/* Profile Card Name */
+body.blur-mode.blur-profile-card-name .profile-card-name {
+  filter: blur(var(--blur-profile-card-name, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-profile-card-name:not(.nohover-profile-card-name) .profile-card-name:hover {
+  filter: none !important;
+}
+
+/* Profile Card Headline */
+body.blur-mode.blur-profile-card-headline .profile-card-headline {
+  filter: blur(var(--blur-profile-card-headline, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-profile-card-headline:not(.nohover-profile-card-headline) .profile-card-headline:hover {
+  filter: none !important;
+}
+
+/* Profile Card Location */
+body.blur-mode.blur-profile-card-location a>p.profile-card-headline.text-body-xsmall.mt1+p.text-body-xsmall.t-black--light.mt1 {
+  filter: blur(var(--blur-profile-card-location, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-profile-card-location:not(.nohover-profile-card-location) a>p.profile-card-headline.text-body-xsmall.mt1+p.text-body-xsmall.t-black--light.mt1:hover {
+  filter: none !important;
+}
+
+/* Message User Picture */
+body.blur-mode.blur-message-user-picture div.msg-selectable-entity {
+  filter: blur(var(--blur-message-user-picture, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-message-user-picture:not(.nohover-message-user-picture) div.msg-selectable-entity:hover {
+  filter: none !important;
+}
+
+/* Message User Name */
+body.blur-mode.blur-message-user-name .msg-conversation-listitem__participant-names.msg-conversation-card__participant-names {
+  filter: blur(var(--blur-message-user-name, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-message-user-name:not(.nohover-message-user-name) .msg-conversation-listitem__participant-names.msg-conversation-card__participant-names:hover {
+  filter: none !important;
+}
+
+/* Message Preview */
+body.blur-mode.blur-message-preview .msg-overlay-list-bubble__message-snippet--v2 {
+  filter: blur(var(--blur-message-preview, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-message-preview:not(.nohover-message-preview) .msg-overlay-list-bubble__message-snippet--v2:hover {
+  filter: none !important;
+}
+
+/* Message Preview Timestamp */
+body.blur-mode.blur-message-preview-timestamp .msg-overlay-list-bubble-item__time-stamp {
+  filter: blur(var(--blur-message-preview-timestamp, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-message-preview-timestamp:not(.nohover-message-preview-timestamp) .msg-overlay-list-bubble-item__time-stamp:hover {
+  filter: none !important;
+}
+
+/* Add to Your Feed */
+body.blur-mode.blur-add-to-your-feed .feed-follows-module-recommendation {
+  filter: blur(var(--blur-add-to-your-feed, 8px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-add-to-your-feed:not(.nohover-add-to-your-feed) .feed-follows-module-recommendation:hover {
+  filter: none !important;
+}
+
+/* Opened Selected Message Avatar */
+body.blur-mode.blur-opened-selected-message-avatar .presence-entity__image.EntityPhoto-circle-1,
+body.blur-mode.blur-opened-selected-message-avatar .msg-s-event-listitem__profile-picture.EntityPhoto-circle-2,
+body.blur-mode.blur-opened-selected-message-avatar .msg-s-event-listitem__seen-receipt-photo.EntityPhoto-circle-1 {
+  filter: blur(var(--blur-opened-selected-message-avatar, 8px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-opened-selected-message-avatar:not(.nohover-opened-selected-message-avatar) .presence-entity__image.EntityPhoto-circle-1:hover,
+body.blur-mode.blur-opened-selected-message-avatar:not(.nohover-opened-selected-message-avatar) .msg-s-event-listitem__profile-picture.EntityPhoto-circle-2:hover,
+body.blur-mode.blur-opened-selected-message-avatar:not(.nohover-opened-selected-message-avatar) .msg-s-event-listitem__seen-receipt-photo.EntityPhoto-circle-1:hover {
+  filter: none !important;
+}
+
+/* Opened Selected Message Name */
+body.blur-mode.blur-opened-selected-message-name h2.pr1.msg-overlay-bubble-header__title {
+  filter: blur(var(--blur-opened-selected-message-name, 8px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-opened-selected-message-name:not(.nohover-opened-selected-message-name) h2.pr1.msg-overlay-bubble-header__title:hover {
+  filter: none !important;
+}
+
+/* Opened Selected Message Profile Card */
+body.blur-mode.blur-opened-selected-message-profile-card .msg-s-profile-card.msg-s-profile-card-one-to-one {
+  filter: blur(var(--blur-opened-selected-message-profile-card, 8px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-opened-selected-message-profile-card:not(.nohover-opened-selected-message-profile-card) .msg-s-profile-card.msg-s-profile-card-one-to-one:hover {
+  filter: none !important;
+}
+
+/* Opened Selected Message In Chat Name */
+body.blur-mode.blur-opened-selected-message-in-chat-name .msg-s-message-group__profile-link.msg-s-message-group__name {
+  filter: blur(var(--blur-opened-selected-message-in-chat-name, 8px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-opened-selected-message-in-chat-name:not(.nohover-opened-selected-message-in-chat-name) .msg-s-message-group__profile-link.msg-s-message-group__name:hover {
+  filter: none !important;
+}
+
+/* Opened Selected Message In Chat Text */
+body.blur-mode.blur-opened-selected-message-in-chat-text .msg-s-event-listitem__body {
+  filter: blur(var(--blur-opened-selected-message-in-chat-text, 8px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-opened-selected-message-in-chat-text:not(.nohover-opened-selected-message-in-chat-text) .msg-s-event-listitem__body:hover {
+  filter: none !important;
+}
+
+/* Opened Selected Message In Chat Box Opacity */
+body.blur-mode.reduced-opened-selected-message-in-chat-box-opacity div.msg-form__contenteditable {
+  opacity: var(--opacity-opened-selected-message-in-chat-box-opacity, 0.3) !important;
+  transition: opacity 0.2s ease;
+}
+
+body.blur-mode.reduced-opened-selected-message-in-chat-box-opacity:not(.nohover-opened-selected-message-in-chat-box-opacity):hover div.msg-form__contenteditable {
+  opacity: 1 !important;
+}
