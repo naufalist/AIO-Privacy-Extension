@@ -23,7 +23,8 @@ const siteOptions = {
   ],
   chatgpt: [
     { id: "sidebar-titles", label: "Sidebar Titles" },
-    { id: "chat-section-block", label: "Chat Section" }
+    { id: "chat-section-block", label: "Chat Section" },
+    { id: "prompt-text-opacity", label: "Prompt Text Opacity", isOpacity: true, disableHoverUnblur: true }
   ],
   facebook: [
     { id: "avatar", label: "Avatar (FB Messenger)" },

@@ -45,9 +45,12 @@ export const defaultSettings = {
   chatgpt: {
     "sidebar-titles": true,
     "chat-section-block": true,
+    "prompt-text-opacity": true,
+    "prompt-text-opacity_nohover": true,
 
     "sidebar-titles_strength": 8,
-    "chat-section-block_strength": 8
+    "chat-section-block_strength": 8,
+    "prompt-text-opacity_strength": 0.3,
   },
   facebook: {
     "avatar": true,

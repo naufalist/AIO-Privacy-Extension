@@ -17,3 +17,13 @@ body.blur-mode.blur-chat-section-block article[data-testid^="conversation-turn-"
 body.blur-mode.blur-chat-section-block:not(.nohover-chat-section-block) article[data-testid^="conversation-turn-"]:hover .text-message {
   filter: none !important;
 }
+
+/* Prompt Text */
+body.blur-mode.reduced-prompt-text-opacity div#prompt-textarea {
+  opacity: var(--opacity-prompt-text-opacity, 0.3);
+  transition: opacity 0.2s ease;
+}
+
+body.blur-mode.reduced-prompt-text-opacity:not(.nohover-prompt-text-opacity) div#prompt-textarea:hover {
+  opacity: 1 !important;
+}
