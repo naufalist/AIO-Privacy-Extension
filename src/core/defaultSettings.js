@@ -88,6 +88,13 @@ export const defaultSettings = {
     "article-content-title_strength": 4,
     "article-content_strength": 16,
     "question-card_strength": 4
+  },
+  canva: {
+    "canva-page-header": true,
+    "canva-page-content": true,
+
+    "canva-page-header_strength": 4,
+    "canva-page-content_strength": 16
   }
 };
 

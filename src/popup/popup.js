@@ -44,6 +44,10 @@ const siteOptions = {
     { id: "article-content-title", label: "Article Content Title" },
     { id: "article-content", label: "Article Content" },
     { id: "question-card", label: "Question Card" }
+  ],
+  canva: [
+    { id: "canva-page-header", label: "Canva Page Header" },
+    { id: "canva-page-content", label: "Canva Page Content" },
   ]
 };
 
@@ -79,6 +83,7 @@ function detectActiveSite(callback) {
     if (hostname.includes("chat.openai.com") || hostname.includes("chatgpt.com")) return callback("chatgpt");
     if (hostname.includes("facebook.com")) return callback("facebook");
     if (hostname.includes("quora.com")) return callback("quora");
+    if (hostname.includes("canva.com")) return callback("canva");
 
     return callback(null);
   });

@@ -1,0 +1,19 @@
+/* Canva Page Header */
+body.blur-mode.blur-canva-page-header .YCeq2g.OosofQ {
+  filter: blur(var(--blur-canva-page-header, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-canva-page-header:not(.nohover-canva-page-header) .YCeq2g.OosofQ:hover {
+  filter: none !important;
+}
+
+/* Canva Page Content */
+body.blur-mode.blur-canva-page-content .CAi1bQ .DPPJ_A ._mXnjA {
+  filter: blur(var(--blur-canva-page-content, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-canva-page-content:not(.nohover-canva-page-content) .CAi1bQ .DPPJ_A ._mXnjA:hover {
+  filter: none !important;
+}

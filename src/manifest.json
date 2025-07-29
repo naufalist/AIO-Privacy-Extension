@@ -13,7 +13,8 @@
     "*://chatgpt.com/*",
     "*://chat.openai.com/*",
     "*://*.facebook.com/*",
-    "*://*.quora.com/*"
+    "*://*.quora.com/*",
+    "*://www.canva.com/*"
   ],
   "action": {
     "default_popup": "popup/popup.html",
@@ -64,6 +65,14 @@
       ],
       "js": [
         "content/quora.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://www.canva.com/*"
+      ],
+      "js": [
+        "content/canva.js"
       ]
     }
   ],
