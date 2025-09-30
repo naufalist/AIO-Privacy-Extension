@@ -11,28 +11,41 @@ body.blur-mode.blur-logo:not(.nohover-logo) yt-icon#logo-icon:hover {
 /* Video Titles */
 body.blur-mode.blur-titles a#video-title-link,
 body.blur-mode.blur-titles yt-formatted-string#video-title,
-body.blur-mode.blur-titles ytd-video-renderer #title-wrapper a#video-title {
+body.blur-mode.blur-titles ytd-video-renderer #title-wrapper a#video-title,
+body.blur-mode.blur-titles div.yt-lockup-metadata-view-model__text-container {
   filter: blur(var(--blur-titles, 8px)) !important;
   transition: filter 0.2s ease;
 }
 
 body.blur-mode.blur-titles:not(.nohover-titles) a#video-title-link:hover,
 body.blur-mode.blur-titles:not(.nohover-titles) yt-formatted-string#video-title:hover,
-body.blur-mode.blur-titles:not(.nohover-titles) ytd-video-renderer #title-wrapper a#video-title:hover {
+body.blur-mode.blur-titles:not(.nohover-titles) ytd-video-renderer #title-wrapper a#video-title:hover,
+body.blur-mode.blur-titles:not(.nohover-titles) div.yt-lockup-metadata-view-model__text-container:hover {
   filter: none !important;
 }
 
 /* Video Thumbnails */
 body.blur-mode.blur-thumbnails ytd-thumbnail img.yt-core-image,
 body.blur-mode.blur-thumbnails #thumbnail img.yt-core-image,
-body.blur-mode.blur-thumbnails a#thumbnail img.yt-core-image {
+body.blur-mode.blur-thumbnails a#thumbnail img.yt-core-image,
+body.blur-mode.blur-thumbnails img.ytCoreImageHost {
   filter: blur(var(--blur-thumbnails, 8px)) !important;
   transition: filter 0.2s ease;
 }
 
 body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) ytd-thumbnail img.yt-core-image:hover,
 body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) #thumbnail img.yt-core-image:hover,
-body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) a#thumbnail img.yt-core-image:hover {
+body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) a#thumbnail img.yt-core-image:hover,
+body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) img.ytCoreImageHost:hover {
+  filter: none !important;
+}
+
+body.blur-mode.blur-thumbnails img.ytCoreImageHost {
+  filter: blur(var(--blur-thumbnails, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-thumbnails:not(.nohover-thumbnails) img.ytCoreImageHost:hover {
   filter: none !important;
 }
 
