@@ -173,6 +173,16 @@ body.blur-mode.blur-shorts-titles:not(.nohover-shorts-titles) h3.shortsLockupVie
   filter: none !important;
 }
 
+/* Youtube Chip Cloud Renderer */
+body.blur-mode.blur-chip-cloud-renderer yt-chip-cloud-chip-renderer {
+  filter: blur(var(--blur-chip-cloud-renderer, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-chip-cloud-renderer:not(.nohover-chip-cloud-renderer) yt-chip-cloud-chip-renderer:hover {
+  filter: none !important;
+}
+
 /* Mix Titles */
 body.blur-mode.blur-mix-titles .yt-lockup-metadata-view-model-wiz__title,
 body.blur-mode.blur-mix-titles .yt-lockup-metadata-view-model-wiz__title .yt-core-attributed-string {
@@ -234,4 +244,14 @@ body.blur-shorts-thumbnails ytm-shorts-lockup-view-model img.shortsLockupViewMod
 body.nohover-shorts-thumbnails.blur-shorts-thumbnails ytm-shorts-lockup-view-model-v2 img.shortsLockupViewModelHostThumbnail:hover,
 body.nohover-shorts-thumbnails.blur-shorts-thumbnails ytm-shorts-lockup-view-model img.shortsLockupViewModelHostThumbnail:hover {
   filter: blur(var(--blur-shorts-thumbnails, 8px)) !important;
+}
+
+/* Video Stream */
+body.blur-mode.blur-video-stream video.video-stream {
+  filter: blur(var(--blur-video-stream, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-video-stream:not(.nohover-video-stream) video.video-stream:hover {
+  filter: none !important;
 }

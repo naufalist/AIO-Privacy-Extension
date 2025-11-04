@@ -1,4 +1,22 @@
 export const defaultSettings = {
+  whatsapp: {
+    "logo": true,
+    "profile-picture": true,
+    "contact-name": true,
+    "preview-chat": true,
+    "chat-bubble": true,
+    "chat-input-opacity": true,
+    "chat-input-opacity_nohover": true,
+    "chat-input": true,
+
+    "logo_strength": 8,
+    "profile-picture_strength": 8,
+    "contact-name_strength": 5,
+    "preview-chat_strength": 8,
+    "chat-bubble_strength": 8,
+    "chat-input-opacity_strength": 0.2,
+    "chat-input_strength": 8,
+  },
   youtube: {
     "logo": true,
     "titles": true,
@@ -12,10 +30,12 @@ export const defaultSettings = {
     "searchbox-text-opacity": true,
     "searchbox-text-opacity_nohover": true,
     "sidebar-subscriptions": true,
+    "chip-cloud-renderer": true,
     "mix-titles": true,
     "mix-channel-names": true,
     "shorts-titles": true,
     "shorts-thumbnails": true,
+    // "video-stream": true,
 
     "logo_strength": 8,
     "titles_strength": 8,
@@ -28,10 +48,12 @@ export const defaultSettings = {
     "playlist-byline_strength": 8,
     "searchbox-text-opacity_strength": 0.3,
     "sidebar-subscriptions_strength": 8,
+    "chip-cloud-renderer_strength": 8,
     "mix-titles_strength": 8,
     "mix-channel-names_strength": 8,
     "shorts-titles_strength": 8,
     "shorts-thumbnails_strength": 8
+    // "video-stream_strength": 16
   },
   twitter: {
     "tweet": true,

@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
   "name": "All-In-One Privacy Extension",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Customize what you see. Hide, dim, or blur elements across the web.",
   "permissions": [
     "storage"
   ],
   "host_permissions": [
+    "*://web.whatsapp.com/",
     "*://www.youtube.com/*",
     "*://x.com/*",
     "*://twitter.com/*",
@@ -26,6 +27,14 @@
     "type": "module"
   },
   "content_scripts": [
+    {
+      "matches": [
+        "*://web.whatsapp.com/"
+      ],
+      "js": [
+        "content/whatsapp.js"
+      ]
+    },
     {
       "matches": [
         "*://www.youtube.com/*"
