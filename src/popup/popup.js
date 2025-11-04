@@ -20,6 +20,7 @@ const siteOptions = {
     { id: "playlist-byline", label: "Playlist Channel Names" },
     { id: "searchbox-text-opacity", label: "Search Box & Suggestion Text", isOpacity: true, disableHoverUnblur: true },
     { id: "sidebar-subscriptions", label: "Sidebar Subscriptions" },
+    { id: "chip-cloud-renderer", label: "Chip Cloud Renderer" },
     { id: "mix-titles", label: "Mix Titles" },
     { id: "mix-channel-names", label: "Mix Channel Names" },
     { id: "shorts-titles", label: "Shorts Titles" },
