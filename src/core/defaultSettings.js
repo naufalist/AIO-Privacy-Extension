@@ -1,4 +1,22 @@
 export const defaultSettings = {
+  whatsapp: {
+    "logo": true,
+    "profile-picture": true,
+    "contact-name": true,
+    "preview-chat": true,
+    "chat-bubble": true,
+    "chat-input-opacity": true,
+    "chat-input-opacity_nohover": true,
+    "chat-input": true,
+
+    "logo_strength": 8,
+    "profile-picture_strength": 8,
+    "contact-name_strength": 5,
+    "preview-chat_strength": 8,
+    "chat-bubble_strength": 8,
+    "chat-input-opacity_strength": 0.2,
+    "chat-input_strength": 8,
+  },
   youtube: {
     "logo": true,
     "titles": true,

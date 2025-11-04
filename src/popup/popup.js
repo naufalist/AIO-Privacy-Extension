@@ -1,4 +1,13 @@
 const siteOptions = {
+  whatsapp: [
+    { id: "logo", label: "Logo" },
+    { id: "profile-picture", label: "Profile Picture" },
+    { id: "contact-name", label: "Contact Name" },
+    { id: "preview-chat", label: "Preview Chat" },
+    { id: "chat-bubble", label: "Chat Bubble" },
+    { id: "chat-input-opacity", label: "Chat Input Text", isOpacity: true, disableHoverUnblur: true },
+    { id: "chat-input", label: "Chat Input" },
+  ],
   youtube: [
     { id: "logo", label: "YouTube Logo" },
     { id: "titles", label: "Video Titles" },
@@ -97,6 +106,7 @@ function detectActiveSite(callback) {
     const url = new URL(tabs[0].url);
     const hostname = url.hostname;
 
+    if (hostname.includes("web.whatsapp.com")) return callback("whatsapp");
     if (hostname.includes("youtube.com")) return callback("youtube");
     if (hostname.includes("x.com") || hostname.includes("twitter.com")) return callback("twitter");
     if (hostname.includes("chat.openai.com") || hostname.includes("chatgpt.com")) return callback("chatgpt");
