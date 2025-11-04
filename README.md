@@ -18,6 +18,9 @@
   </p>
 </div>
 
+## Chrome Web Store Url
+<a href="https://chromewebstore.google.com/detail/all-in-one-privacy-extens/bnfcaffkgcaolcffbnmkmcbfagommhpi">All-In-One Privacy Extension</a>
+
 ## About
 
 This extension was built out of a personal need for screen privacy in open office environments, where people can walk by and easily glance at your screen. With this tool, you can selectively obscure parts of a page like thumbnails, usernames, or trending topics without needing to close or switch tabs.
