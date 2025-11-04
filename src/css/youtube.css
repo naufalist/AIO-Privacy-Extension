@@ -252,6 +252,6 @@ body.blur-mode.blur-video-stream video.video-stream {
   transition: filter 0.2s ease;
 }
 
-body.blur-mode.blur-video-stream:not(.nohover-shorts-titles) video.video-stream:hover {
+body.blur-mode.blur-video-stream:not(.nohover-video-stream) video.video-stream:hover {
   filter: none !important;
 }
