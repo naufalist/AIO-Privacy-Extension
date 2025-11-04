@@ -235,3 +235,13 @@ body.nohover-shorts-thumbnails.blur-shorts-thumbnails ytm-shorts-lockup-view-mod
 body.nohover-shorts-thumbnails.blur-shorts-thumbnails ytm-shorts-lockup-view-model img.shortsLockupViewModelHostThumbnail:hover {
   filter: blur(var(--blur-shorts-thumbnails, 8px)) !important;
 }
+
+/* Video Stream */
+body.blur-mode.blur-video-stream video.video-stream {
+  filter: blur(var(--blur-video-stream, 8px)) !important;
+  transition: filter 0.2s ease;
+}
+
+body.blur-mode.blur-video-stream:not(.nohover-shorts-titles) video.video-stream:hover {
+  filter: none !important;
+}

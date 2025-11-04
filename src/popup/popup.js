@@ -24,6 +24,7 @@ const siteOptions = {
     { id: "mix-channel-names", label: "Mix Channel Names" },
     { id: "shorts-titles", label: "Shorts Titles" },
     { id: "shorts-thumbnails", label: "Shorts Thumbnails" },
+    { id: "video-stream", label: "Video Stream" },
   ],
   twitter: [
     { id: "tweet", label: "Tweet" },

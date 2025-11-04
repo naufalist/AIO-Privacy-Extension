@@ -34,6 +34,7 @@ export const defaultSettings = {
     "mix-channel-names": true,
     "shorts-titles": true,
     "shorts-thumbnails": true,
+    // "video-stream": true,
 
     "logo_strength": 8,
     "titles_strength": 8,
@@ -50,6 +51,7 @@ export const defaultSettings = {
     "mix-channel-names_strength": 8,
     "shorts-titles_strength": 8,
     "shorts-thumbnails_strength": 8
+    // "video-stream_strength": 16
   },
   twitter: {
     "tweet": true,
