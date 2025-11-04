@@ -72,6 +72,7 @@ This extension was built out of a personal need for screen privacy in open offic
           <li>Blur Shorts thumbnails</li>
           <li>Blur Mix titles (main view & playlist)</li>
           <li>Blur Mix channel names</li>
+          <li>Blur video stream (this feature is actually awkward)</li>
           <li>Reduce opacity for search box input</li>
           <li>Reduce opacity for search suggestions</li>
           <li>Supports hover-to-unblur for each feature</li>
@@ -133,6 +134,22 @@ This extension was built out of a personal need for screen privacy in open offic
           <li>Blur article content (text, list, images)</li>
           <li>Blur preview text (truncated summary)</li>
           <li>Blur background-image previews</li>
+          <li>Supports hover-to-unblur for each feature</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td style="text-align:center; vertical-align: top;"><strong>WhatsApp Web</strong></td>
+      <td>
+        <ul>
+          <li>Blur logo</li>
+          <li>Blur profile picture</li>
+          <li>Blur contact name</li>
+          <li>Blur preview chat</li>
+          <li>Blur chat bubble</li>
+          <li>Blur chat input (emoji & emoji popup)</li>
+          <li>Reduce opacity of chat input text</li>
           <li>Supports hover-to-unblur for each feature</li>
         </ul>
       </td>
