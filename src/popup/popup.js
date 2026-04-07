@@ -47,6 +47,29 @@ const siteOptions = {
     { id: "chat-avatar", label: "Chat Avatar (FB Messenger)" },
     { id: "chat-input-opacity", label: "Chat Input Opacity (FB Messenger)", isOpacity: true, disableHoverUnblur: true }
   ],
+  shopee: [
+    { id: "topbar-logo", label: "Topbar Logo" },
+    { id: "topbar-menu", label: "Topbar Menu" },
+    { id: "topbar-search-recommendation", label: "Topbar Search Recommendation" },
+    { id: "searchbox-input-opacity", label: "Search Box Input Opacity", isOpacity: true, disableHoverUnblur: true },
+    { id: "searchbar-listbox-opacity", label: "Search Bar Listbox Opacity", isOpacity: true, disableHoverUnblur: true },
+    { id: "search-result-header", label: "Search Result Header" },
+    { id: "cart-menu", label: "Cart Menu" },
+    { id: "cart-popup", label: "Cart Popup" },
+    { id: "homepage-carousel-banner", label: "Homepage Carousel Banner" },
+    { id: "homepage-banner-menu", label: "Homepage Banner Menu" },
+    { id: "home-category-list", label: "Home Category List" },
+    { id: "home-flash-sale", label: "Home Flash Sale" },
+    { id: "produk-terlaris", label: "Produk Terlaris" },
+    { id: "product-card", label: "Product Card" },
+    { id: "product-image", label: "Product Image" },
+    { id: "product-title", label: "Product Title" },
+    { id: "product-price", label: "Product Price" },
+    { id: "total-product-sold", label: "Total Product Sold" },
+    { id: "product-flash-sale-badge", label: "Product Flash Sale Badge" },
+    { id: "cart-section", label: "Cart Section" },
+    { id: "cart-footer", label: "Cart Footer" }
+  ],
   quora: [
     { id: "article-full-block", label: "Article Full Block" },
     { id: "article-avatar", label: "Article Avatar" },
@@ -113,6 +136,7 @@ function detectActiveSite(callback) {
     if (hostname.includes("x.com") || hostname.includes("twitter.com")) return callback("twitter");
     if (hostname.includes("chat.openai.com") || hostname.includes("chatgpt.com")) return callback("chatgpt");
     if (hostname.includes("facebook.com")) return callback("facebook");
+    if (hostname.includes("shopee.co.id")) return callback("shopee");
     if (hostname.includes("quora.com")) return callback("quora");
     if (hostname.includes("canva.com")) return callback("canva");
     if (hostname.includes("linkedin.com")) return callback("linkedin");

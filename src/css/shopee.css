@@ -1,0 +1,254 @@
+/* Topbar Logo */
+body.blur-mode.blur-topbar-logo a.header-with-search__logo-section {
+  filter: blur(var(--blur-topbar-logo, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-topbar-logo:not(.nohover-topbar-logo) a.header-with-search__logo-section:hover {
+  filter: none !important;
+}
+
+/* Topbar Menu Seller Centre */
+/*
+1. Seller menu
+2. Download menu
+3. Follow us menu
+4. Social media icons flex L4HcCc FwLW4J
+5. Navbar links ul.navbar__links
+*/
+body.blur-mode.blur-topbar-menu a[href="//seller.shopee.co.id"],
+body.blur-mode.blur-topbar-menu a[href="/web/"],
+body.blur-mode.blur-topbar-menu div.flex.L4HcCc.xXLiVe.RD3lG6,
+body.blur-mode.blur-topbar-menu div.flex.L4HcCc.FwLW4J,
+body.blur-mode.blur-topbar-menu ul.navbar__links {
+  filter: blur(var(--blur-topbar-menu, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-topbar-menu:not(.nohover-topbar-menu) a[href="//seller.shopee.co.id"]:hover,
+body.blur-mode.blur-topbar-menu:not(.nohover-topbar-menu) a[href="/web/"]:hover,
+body.blur-mode.blur-topbar-menu:not(.nohover-topbar-menu) div.flex.L4HcCc.xXLiVe.RD3lG6:hover,
+body.blur-mode.blur-topbar-menu:not(.nohover-topbar-menu) div.flex.L4HcCc.FwLW4J:hover,
+body.blur-mode.blur-topbar-menu:not(.nohover-topbar-menu) ul.navbar__links:hover {
+  filter: none !important;
+}
+
+/* Top bar Search recommendation section (div.header-with-search__search-section > div:nth-child(1) */
+body.blur-mode.blur-topbar-search-recommendation div.header-with-search__search-section,
+body.blur-mode.blur-topbar-search-recommendation h1.JmXfms {
+  filter: blur(var(--blur-topbar-search-recommendation, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-topbar-search-recommendation:not(.nohover-topbar-search-recommendation) div.header-with-search__search-section:hover,
+body.blur-mode.blur-topbar-search-recommendation:not(.nohover-topbar-search-recommendation) h1.JmXfms:hover {
+  filter: none !important;
+}
+
+/* input search box: input.shopee-searchbar-input__input */
+body.blur-mode.reduced-searchbox-input-opacity input.shopee-searchbar-input__input {
+  opacity: var(--opacity-searchbox-input-opacity, 0.2) !important;
+  transition: opacity 0.2s ease;
+}
+
+body.blur-mode.reduced-searchbox-input-opacity:not(.nohover-searchbox-input-opacity):hover input.shopee-searchbar-input__input {
+  opacity: 1 !important;
+}
+
+/* searchbar hints history */
+body.blur-mode.reduced-searchbar-hints-history-opacity div.shopee-searchbar-hints__history-entry__text,
+body.blur-mode.reduced-searchbar-hints-history-opacity a.shopee-searchbar-hints__search-shop,
+body.blur-mode.reduced-searchbar-hints-history-opacity div.shopee-searchbar-hints__entry__product-name {
+  opacity: var(--opacity-searchbar-hints-history-opacity, 0.2) !important;
+  transition: opacity 0.2s ease;
+}
+
+body.blur-mode.reduced-searchbar-hints-history-opacity:not(.nohover-searchbar-hints-history-opacity):hover div.shopee-searchbar-hints__history-entry__text,
+body.blur-mode.reduced-searchbar-hints-history-opacity:not(.nohover-searchbar-hints-history-opacity):hover a.shopee-searchbar-hints__search-shop,
+body.blur-mode.reduced-searchbar-hints-history-opacity:not(.nohover-searchbar-hints-history-opacity):hover div.shopee-searchbar-hints__entry__product-name {
+  opacity: 1 !important;
+}
+
+/* Search Result Header: h1.shopee-search-result-header */
+body.blur-mode.blur-search-result-header h1.shopee-search-result-header {
+  filter: blur(var(--blur-search-result-header, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-search-result-header:not(.nohover-search-result-header) h1.shopee-search-result-header:hover {
+  filter: none !important;
+}
+
+/* Cart Menu */
+body.blur-mode.blur-cart-menu div.cart-drawer-container {
+  filter: blur(var(--blur-cart-menu, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-cart-menu:not(.nohover-cart-menu) div.cart-drawer-container:hover {
+  filter: none !important;
+}
+
+/* Cart Popup */
+body.blur-mode.blur-cart-popup div.USqAzC,
+body.blur-mode.blur-cart-popup h3.Z6w4JQ,
+body.blur-mode.blur-cart-popup div.Clb1oh,
+body.blur-mode.blur-cart-popup span.cart-drawer__more-items-count,
+body.blur-mode.blur-cart-popup a[href="/cart"] {
+  filter: blur(var(--blur-cart-popup, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-cart-popup:not(.nohover-cart-popup) div.USqAzC:hover,
+body.blur-mode.blur-cart-popup:not(.nohover-cart-popup) h3.Z6w4JQ:hover,
+body.blur-mode.blur-cart-popup:not(.nohover-cart-popup) div.Clb1oh:hover,
+body.blur-mode.blur-cart-popup:not(.nohover-cart-popup) span.cart-drawer__more-items-count:hover,
+body.blur-mode.blur-cart-popup:not(.nohover-cart-popup) a[href="/cart"]:hover {
+  filter: none !important;
+}
+
+/* Home Page Carousel Banner: section#HomePageCarouselBannerSection */
+body.blur-mode.blur-homepage-carousel-banner section#HomePageCarouselBannerSection {
+  filter: blur(var(--blur-homepage-carousel-banner, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-homepage-carousel-banner:not(.nohover-homepage-carousel-banner) section#HomePageCarouselBannerSection:hover {
+  filter: none !important;
+}
+
+/* Home Page Banner Menu: .full-home-banners-wrapper > div.LJXu7k */
+body.blur-mode.blur-homepage-banner-menu div.full-home-banners-wrapper>div.LJXu7k {
+  filter: blur(var(--blur-homepage-banner-menu, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-homepage-banner-menu:not(.nohover-homepage-banner-menu) div.full-home-banners-wrapper>div.LJXu7k:hover {
+  filter: none !important;
+}
+
+/* Home Category List: div.home-category-list */
+body.blur-mode.blur-home-category-list div.home-category-list {
+  filter: blur(var(--blur-home-category-list, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-home-category-list:not(.nohover-home-category-list) div.home-category-list:hover {
+  filter: none !important;
+}
+
+/* Home Flash Sale: div.R3bOnT */
+body.blur-mode.blur-home-flash-sale div.R3bOnT {
+  filter: blur(var(--blur-home-flash-sale, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-home-flash-sale:not(.nohover-home-flash-sale) div.R3bOnT:hover {
+  filter: none !important;
+}
+
+/* Produk Terlaris: div.shopee-header-section.au6P2T.shopee-header-section--simple */
+body.blur-mode.blur-produk-terlaris div.shopee-header-section.au6P2T.shopee-header-section--simple {
+  filter: blur(var(--blur-produk-terlaris, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-produk-terlaris:not(.nohover-produk-terlaris) div.shopee-header-section.au6P2T.shopee-header-section--simple:hover {
+  filter: none !important;
+}
+
+/* Product Card: div.flex.flex-col.bg-white.cursor-pointer.h-full */
+body.blur-mode.blur-product-card div.flex.flex-col.bg-white.cursor-pointer.h-full {
+  filter: blur(var(--blur-product-card, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-product-card:not(.nohover-product-card) div.flex.flex-col.bg-white.cursor-pointer.h-full:hover {
+  filter: none !important;
+}
+
+/* Product Image: div.relative.z-0.w-full.pt-full */
+body.blur-mode.blur-product-image div.relative.z-0.w-full.pt-full,
+body.blur-mode.blur-product-image div.TMw1ot,
+body.blur-mode.blur-product-image div.airUhU,
+body.blur-mode.blur-product-image div.Vi9WmM,
+body.blur-mode.blur-product-image div.jA1mTx.d0bVwS {
+  filter: blur(var(--blur-product-image, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-product-image:not(.nohover-product-image) div.relative.z-0.w-full.pt-full:hover,
+body.blur-mode.blur-product-image:not(.nohover-product-image) div.TMw1ot:hover,
+body.blur-mode.blur-product-image:not(.nohover-product-image) div.airUhU:hover,
+body.blur-mode.blur-product-image:not(.nohover-product-image) div.Vi9WmM:hover,
+body.blur-mode.blur-product-image:not(.nohover-product-image) div.jA1mTx.d0bVwS:hover {
+  filter: none !important;
+}
+
+/* Product Title: div.mb-1.line-clamp-2.break-words.min-w-0.min-h-[2.5rem].text-sm.th:text-[12px].my:text-[12px].km:text-[12px] */
+body.blur-mode.blur-product-title div.mb-1.line-clamp-2.break-words.min-w-0.min-h-\[2\.5rem\].text-sm.th\:text-\[12px\].my\:text-\[12px\].km\:text-\[12px\],
+body.blur-mode.blur-product-title div.flex.items-center.idLK2l.page-product__breadcrumb,
+body.blur-mode.blur-product-title div.WBVL_7,
+body.blur-mode.blur-product-title div.r2TsIa {
+  filter: blur(var(--blur-product-title, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-product-title:not(.nohover-product-title) div.mb-1.line-clamp-2.break-words.min-w-0.min-h-\[2\.5rem\].text-sm.th\:text-\[12px\].my\:text-\[12px\].km\:text-\[12px\]:hover,
+body.blur-mode.blur-product-title:not(.nohover-product-title) div.flex.items-center.idLK2l.page-product__breadcrumb:hover,
+body.blur-mode.blur-product-title:not(.nohover-product-title) div.WBVL_7:hover,
+body.blur-mode.blur-product-title:not(.nohover-product-title) div.r2TsIa:hover {
+  filter: none !important;
+}
+
+/* Product Price: div.max-w-full.flex-grow-1.flex-shrink-0.truncate.text-shopee-primary.flex.items-center.font-medium */
+body.blur-mode.blur-product-price div.max-w-full.flex-grow-1.flex-shrink-0.truncate.text-shopee-primary.flex.items-center.font-medium,
+body.blur-mode.blur-product-price div.flex.flex-column.IFdRIb {
+  filter: blur(var(--blur-product-price, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-product-price:not(.nohover-product-price) div.max-w-full.flex-grow-1.flex-shrink-0.truncate.text-shopee-primary.flex.items-center.font-medium:hover,
+body.blur-mode.blur-product-price:not(.nohover-product-price) div.flex.flex-column.IFdRIb:hover {
+  filter: none !important;
+}
+
+/* Total Product Sold: truncate text-shopee-black87 text-xs min-h-4 flex-shrink-1 ml-auto */
+body.blur-mode.blur-total-product-sold div.truncate.text-shopee-black87.text-xs.min-h-4.flex-shrink-1.ml-auto {
+  filter: blur(var(--blur-total-product-sold, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-total-product-sold:not(.nohover-total-product-sold) div.truncate.text-shopee-black87.text-xs.min-h-4.flex-shrink-1.ml-auto:hover {
+  filter: none !important;
+}
+
+/* Product Flash Sale Badge: div.box-border.flex.!space-x-1.h-5.text-sp10.my:text-[0.5rem].km:text-[0.5rem].items-center.overflow-hidden.mb-2 */
+body.blur-mode.blur-product-flash-sale-badge div.box-border.flex.\!space-x-1.h-5.text-sp10.my\:text-\[0\.5rem\].km\:text-\[0\.5rem\].items-center.overflow-hidden.mb-2 {
+  filter: blur(var(--blur-product-flash-sale-badge, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-product-flash-sale-badge:not(.nohover-product-flash-sale-badge) div.box-border.flex.\!space-x-1.h-5.text-sp10.my\:text-\[0\.5rem\].km\:text-\[0\.5rem\].items-center.overflow-hidden.mb-2:hover {
+  filter: none !important;
+}
+
+/* Cart Section: section.AuhAvM */
+body.blur-mode.blur-cart-section section.AuhAvM {
+  filter: blur(var(--blur-cart-section, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-cart-section:not(.nohover-cart-section) section.AuhAvM:hover {
+  filter: none !important;
+}
+
+/* Cart Footer: section.yn6AIc.dhqg2H */
+body.blur-mode.blur-cart-footer section.yn6AIc.dhqg2H {
+  filter: blur(var(--blur-cart-footer, 10px)) !important;
+  transition: filter 0.3s ease;
+}
+
+body.blur-mode.blur-cart-footer:not(.nohover-cart-footer) section.yn6AIc.dhqg2H:hover {
+  filter: none !important;
+}
