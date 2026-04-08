@@ -17,7 +17,8 @@
     "*://*.shopee.co.id/*",
     "*://*.quora.com/*",
     "*://www.canva.com/*",
-    "*://www.linkedin.com/*"
+    "*://www.linkedin.com/*",
+    "*://www.tiktok.com/*"
   ],
   "action": {
     "default_popup": "popup/popup.html",
@@ -101,13 +102,21 @@
       "js": [
         "content/linkedin.js"
       ]
+    },
+    {
+      "matches": [
+        "*://www.tiktok.com/*"
+      ],
+      "js": [
+        "content/tiktok.js"
+      ]
     }
   ],
   "web_accessible_resources": [
     {
       "resources": [
         "core/*.js",
-        "css/*.css"
+        "sites/*.js"
       ],
       "matches": [
         "<all_urls>"
