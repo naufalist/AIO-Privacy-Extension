@@ -1,10 +1,13 @@
-export async function initSite(site, cssPath) {
+export async function initSite(site) {
   const { getSettings } = await import(chrome.runtime.getURL("../core/getSettings.js"));
-  const { injectCss } = await import(chrome.runtime.getURL("../core/injectCss.js"));
+  const { generateAndInjectCss } = await import(chrome.runtime.getURL("../core/cssGenerator.js"));
   const { injectInitialBlur } = await import(chrome.runtime.getURL("../core/preloadStyle.js"));
   const { waitForBody } = await import(chrome.runtime.getURL("../core/domReady.js"));
   const { applyAllClasses } = await import(chrome.runtime.getURL("../core/applyClasses.js"));
   const { applyStrengths } = await import(chrome.runtime.getURL("../core/applyStrengths.js"));
+
+  const siteConfigModule = await import(chrome.runtime.getURL(`../sites/${site}.js`));
+  const siteConfig = siteConfigModule.default;
 
   await waitForBody();
   const settings = await getSettings(site);
@@ -12,7 +15,7 @@ export async function initSite(site, cssPath) {
   if (!settings) return;
 
   injectInitialBlur(site, settings);
-  injectCss(cssPath);
+  generateAndInjectCss(siteConfig);
   await applyAllClasses(site, settings);
   applyStrengths(site);
 
