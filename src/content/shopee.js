@@ -1,4 +1,4 @@
 (async () => {
   const { initSite } = await import(chrome.runtime.getURL("../core/initSite.js"));
-  initSite("shopee", "css/shopee.css");
+  initSite("shopee");
 })();
