@@ -1,85 +1,22 @@
-const siteOptions = {
-  whatsapp: [
-    { id: "logo", label: "Logo" },
-    { id: "profile-picture", label: "Profile Picture" },
-    { id: "contact-name", label: "Contact Name" },
-    { id: "preview-chat", label: "Preview Chat" },
-    { id: "chat-bubble", label: "Chat Bubble" },
-    { id: "chat-input-opacity", label: "Chat Input Text", isOpacity: true, disableHoverUnblur: true },
-    { id: "chat-input", label: "Chat Input" },
-  ],
-  youtube: [
-    { id: "logo", label: "YouTube Logo" },
-    { id: "titles", label: "Video Titles" },
-    { id: "thumbnails", label: "Thumbnails" },
-    { id: "channel-pics", label: "Channel Pictures" },
-    { id: "channel-names", label: "Channel Names" },
-    { id: "watch-title", label: "Watch Page Title" },
-    { id: "video-description", label: "Video Description" },
-    { id: "playlist-titles", label: "Playlist Titles" },
-    { id: "playlist-byline", label: "Playlist Channel Names" },
-    { id: "searchbox-text-opacity", label: "Search Box & Suggestion Text", isOpacity: true, disableHoverUnblur: true },
-    { id: "sidebar-subscriptions", label: "Sidebar Subscriptions" },
-    { id: "chip-cloud-renderer", label: "Chip Cloud Renderer" },
-    { id: "mix-titles", label: "Mix Titles" },
-    { id: "mix-channel-names", label: "Mix Channel Names" },
-    { id: "shorts-titles", label: "Shorts Titles" },
-    { id: "shorts-thumbnails", label: "Shorts Thumbnails" },
-    { id: "video-stream", label: "Video Stream" },
-  ],
-  twitter: [
-    { id: "tweet", label: "Tweet" },
-    { id: "trending", label: "Trending" },
-    { id: "sidebar-icons", label: "Sidebar Icons" },
-  ],
-  chatgpt: [
-    { id: "sidebar-titles", label: "Sidebar Titles" },
-    { id: "chat-section-block", label: "Chat Section" },
-    { id: "prompt-text-opacity", label: "Prompt Text Opacity", isOpacity: true, disableHoverUnblur: true }
-  ],
-  facebook: [
-    { id: "avatar", label: "Avatar (FB Messenger)" },
-    { id: "display-name-chat", label: "Display Name Chat (FB Messenger)" },
-    { id: "sidebar-display-names", label: "Sidebar Display Name (FB Messenger)" },
-    { id: "sidebar-chat-preview", label: "Sidebar Chat Preview (FB Messenger)" },
-    { id: "chat-bubble", label: "Chat Bubble (FB Messenger)" },
-    { id: "chat-media", label: "Chat Media (FB Messenger)" },
-    { id: "chat-avatar", label: "Chat Avatar (FB Messenger)" },
-    { id: "chat-input-opacity", label: "Chat Input Opacity (FB Messenger)", isOpacity: true, disableHoverUnblur: true }
-  ],
-  quora: [
-    { id: "article-full-block", label: "Article Full Block" },
-    { id: "article-avatar", label: "Article Avatar" },
-    { id: "article-display-name", label: "Article Display Name" },
-    { id: "article-user-byline", label: "Article User Byline" },
-    { id: "article-content-title", label: "Article Content Title" },
-    { id: "article-content", label: "Article Content" },
-    { id: "question-card", label: "Question Card" }
-  ],
-  canva: [
-    { id: "canva-page-header", label: "Canva Page Header" },
-    { id: "canva-page-content", label: "Canva Page Content" },
-  ],
-  linkedin: [
-    { id: "topbar-logo", label: "Topbar Logo" },
-    { id: "post", label: "Post" },
-    { id: "profile-card-picture", label: "Profile Card - Picture" },
-    { id: "profile-card-name", label: "Profile Card - Name" },
-    { id: "profile-card-headline", label: "Profile Card - Headline" },
-    { id: "profile-card-location", label: "Profile Card - Location" },
-    { id: "message-user-picture", label: "Message - User Picture" },
-    { id: "message-user-name", label: "Message - User Name" },
-    { id: "message-preview", label: "Message - Preview" },
-    { id: "message-preview-timestamp", label: "Message - Preview Timestamp" },
-    { id: "add-to-your-feed", label: "Add to your feed" },
-    { id: "opened-selected-message-avatar", label: "Selected Chat - Avatar" },
-    { id: "opened-selected-message-name", label: "Selected Chat - Name" },
-    { id: "opened-selected-message-profile-card", label: "Selected Chat - Profile Card" },
-    { id: "opened-selected-message-in-chat-name", label: "Selected Chat - In Chat Name" },
-    { id: "opened-selected-message-in-chat-text", label: "Selected Chat - In Chat Text" },
-    { id: "opened-selected-message-in-chat-box-opacity", label: "Selected Chat - In Chat Box Opacity", isOpacity: true, disableHoverUnblur: true }
-  ]
-};
+import { siteConfigs } from "../sites/index.js";
+
+/**
+ * Generate popup option list from site configs (single source of truth).
+ */
+function buildSiteOptions() {
+  const options = {};
+  for (const config of Object.values(siteConfigs)) {
+    options[config.id] = config.options.map(opt => ({
+      id: opt.id,
+      label: opt.label,
+      isOpacity: opt.effect === "opacity",
+      disableHoverUnblur: opt.disableHoverUnblur || false
+    }));
+  }
+  return options;
+}
+
+const siteOptions = buildSiteOptions();
 
 function safeSendMessage(message, site, optionId = null) {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -108,14 +45,11 @@ function detectActiveSite(callback) {
     const url = new URL(tabs[0].url);
     const hostname = url.hostname;
 
-    if (hostname.includes("web.whatsapp.com")) return callback("whatsapp");
-    if (hostname.includes("youtube.com")) return callback("youtube");
-    if (hostname.includes("x.com") || hostname.includes("twitter.com")) return callback("twitter");
-    if (hostname.includes("chat.openai.com") || hostname.includes("chatgpt.com")) return callback("chatgpt");
-    if (hostname.includes("facebook.com")) return callback("facebook");
-    if (hostname.includes("quora.com")) return callback("quora");
-    if (hostname.includes("canva.com")) return callback("canva");
-    if (hostname.includes("linkedin.com")) return callback("linkedin");
+    for (const config of Object.values(siteConfigs)) {
+      if (config.hostnames.some(h => hostname.includes(h))) {
+        return callback(config.id);
+      }
+    }
 
     return callback(null);
   });
