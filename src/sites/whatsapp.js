@@ -35,7 +35,10 @@ export default {
     {
       id: "preview-chat",
       label: "Preview Chat",
-      selectors: ['div._ak8j span.x78zum5.x1cy8zhl'],
+      selectors: [
+        'div._ak8j span.x78zum5.x1cy8zhl',
+        'div.xjbqb8w.x1iyjqo2.x1f6kntn.x1fc57z9.x6ikm8r.x10wlt62.x1yc453h.xlyipyv.xuxw1ft.xo1l8bm'
+      ],
       effect: "grayscale-blur",
       defaultEnabled: true,
       defaultStrength: 8
