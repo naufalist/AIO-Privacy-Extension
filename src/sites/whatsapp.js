@@ -18,7 +18,9 @@ export default {
         'img._ao3e.x1n2onr6',
         'span[data-icon="default-contact-refreshed"]',
         'span[data-icon="default-group-refreshed"]',
-        'span[data-icon="wa-chat-psa"]'
+        'span[data-icon="wa-chat-psa"]',
+        '[data-testid="cell-frame-container"] img[src*="pps.whatsapp.net"]',
+        'header[data-testid="conversation-header"] img[src*="pps.whatsapp.net"]'
       ],
       effect: "blur",
       defaultEnabled: true,
@@ -27,7 +29,11 @@ export default {
     {
       id: "contact-name",
       label: "Contact Name",
-      selectors: ['span._ao3e[dir="auto"]'],
+      selectors: [
+        'span._ao3e[dir="auto"]',
+        'div[data-testid="cell-frame-title"]',
+        '[data-testid="conversation-info-header"]'
+      ],
       effect: "grayscale-blur",
       defaultEnabled: true,
       defaultStrength: 5
@@ -55,7 +61,9 @@ export default {
         'div.x10l6tqk.x1vjfegm.x78zum5.x6s0dn4.xl56j7k',
         'span._ahx_[role="button"]',
         'div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xeuugli.x2lwn1j.xozqiw3.x1oa3qoh.x12fk4p8.x1onr9mi.xsdox4t.xh8yej3',
-        'div.x78zum5.x1cy8zhl.xisnujt.x1nxh6w3.xcgms0a.x16cd2qt>span.selectable-text.copyable-text._ao3e'
+        'div.x78zum5.x1cy8zhl.xisnujt.x1nxh6w3.xcgms0a.x16cd2qt>span.selectable-text.copyable-text._ao3e',
+        'span[data-testid="sticker-container"]',
+        'div[data-testid="msg-container"]'
       ],
       effect: "grayscale-blur",
       defaultEnabled: true,
@@ -64,7 +72,11 @@ export default {
     {
       id: "chat-input-opacity",
       label: "Chat Input Text",
-      selectors: ['span.copyable-text.xkrh14z[data-lexical-text="true"]'],
+      selectors: [
+        // 'span.copyable-text.xkrh14z[data-lexical-text="true"]',
+        'span[role="button"][data-emoji-index]',
+        'div.x1n2onr6.xh8yej3.xjdcl3y'
+      ],
       effect: "opacity",
       defaultEnabled: true,
       defaultStrength: 0.2,
