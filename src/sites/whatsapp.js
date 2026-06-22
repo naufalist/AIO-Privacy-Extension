@@ -20,7 +20,8 @@ export default {
         'span[data-icon="default-group-refreshed"]',
         'span[data-icon="wa-chat-psa"]',
         '[data-testid="cell-frame-container"] img[src*="pps.whatsapp.net"]',
-        'header[data-testid="conversation-header"] img[src*="pps.whatsapp.net"]'
+        'header[data-testid="conversation-header"] img[src*="pps.whatsapp.net"]',
+        'img[src*="whatsapp"]'
       ],
       effect: "blur",
       defaultEnabled: true,
