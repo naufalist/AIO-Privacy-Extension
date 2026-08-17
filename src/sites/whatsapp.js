@@ -20,7 +20,9 @@ export default {
         'span[data-icon="default-group-refreshed"]',
         'span[data-icon="wa-chat-psa"]',
         '[data-testid="cell-frame-container"] img[src*="pps.whatsapp.net"]',
-        'header[data-testid="conversation-header"] img[src*="pps.whatsapp.net"]'
+        'header[data-testid="conversation-header"] img[src*="pps.whatsapp.net"]',
+        'img[src*="whatsapp"]',
+        'div[data-testid="cell-frame-container"] > :first-child'
       ],
       effect: "blur",
       defaultEnabled: true,
@@ -63,7 +65,8 @@ export default {
         'div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xeuugli.x2lwn1j.xozqiw3.x1oa3qoh.x12fk4p8.x1onr9mi.xsdox4t.xh8yej3',
         'div.x78zum5.x1cy8zhl.xisnujt.x1nxh6w3.xcgms0a.x16cd2qt>span.selectable-text.copyable-text._ao3e',
         'span[data-testid="sticker-container"]',
-        'div[data-testid="msg-container"]'
+        'div[data-testid="msg-container"]',
+        'div[aria-label="Quoted message"]'
       ],
       effect: "grayscale-blur",
       defaultEnabled: true,
